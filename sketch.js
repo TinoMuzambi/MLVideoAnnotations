@@ -12,7 +12,7 @@ This example uses p5 preload function to create the classifier
 // Classifier Variable
 let classifier;
 // Model URL
-let imageModelURL = "https://teachablemachine.withgoogle.com/models/bXy2kDNi/";
+let imageModelURL = "https://teachablemachine.withgoogle.com/models/7gLJHauvk/";
 
 // Video
 let video;
@@ -26,10 +26,10 @@ async function preload() {
 }
 
 async function setup() {
-	createCanvas(320, 260);
+	createCanvas(640, 480);
 	// Create the video
 	video = createCapture(VIDEO);
-	video.size(320, 240);
+	video.size(width, height);
 	video.hide();
 
 	flippedVideo = ml5.flipImage(video);
