@@ -20,13 +20,22 @@ let flippedVideo;
 // To store the classification
 let label = "";
 
+let laughing;
+let question;
+let sad;
+let bored;
+
 // Load the model first
 async function preload() {
 	classifier = await ml5.imageClassifier(imageModelURL + "model.json");
+	laughing = loadImage("laughing.png");
+	sad = loadImage("sad.png");
+	bored = loadImage("bored.png");
+	question = loadImage("question.png");
 }
 
 async function setup() {
-	createCanvas(640, 480);
+	createCanvas(1080, 600);
 	// Create the video
 	video = createCapture(VIDEO);
 	video.size(width, height);
@@ -47,6 +56,16 @@ function draw() {
 	textSize(16);
 	textAlign(CENTER);
 	text(label, width / 2, height - 4);
+
+	if (label === "Laughing") {
+		image(laughing, 0, 0);
+	} else if (label === "Question") {
+		image(question, 0, 0);
+	} else if (label === "Sad") {
+		image(sad, 0, 0);
+	} else if (label === "Bored") {
+		image(bored, 0, 0);
+	}
 }
 
 // Get a prediction for the current video frame
