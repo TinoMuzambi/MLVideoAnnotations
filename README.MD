@@ -1,4 +1,4 @@
-# Video Annotations
+# Machine Learning Video Annotations
 
 This web app uses a machine learnining model to classify images into categories of hand and facial gestures. It then paints a specified image onto the screen for each category. Using OBS Studio's virtual camera, you can use the browser window as your video feed in video conferencing applications and have annotations pop up in your meetings.
 
