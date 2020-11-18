@@ -16,4 +16,4 @@ This project uses p5.js to create a canvas in the browser that displays the vide
 
 ## Run Locally
 
-To run this app, clone the repo. Go to the Teachable Machine website, train your own image recognition model and update the code for the model and the labels appropriately.
+To run this app, clone the repo. Go to the Teachable Machine website, train your own image recognition model and update the code for the model and the labels appropriately. Thereafter open index.html.
