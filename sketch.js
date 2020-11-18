@@ -36,7 +36,7 @@ async function preload() {
 }
 
 async function setup() {
-	createCanvas(1280, 720);
+	createCanvas(1280, 600);
 	// Create the video
 	video = createCapture(VIDEO);
 	video.size(width, height);
