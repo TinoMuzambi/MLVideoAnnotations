@@ -58,28 +58,14 @@ function draw() {
 	textAlign(CENTER);
 	text(label, width / 2, height - 4);
 
-	if (label !== "Background") {
-		fade = 255;
-	}
-
-	if (fade > 0) {
-		if (label === "Laughing") {
-			tint(255, fade);
-			image(laughing, 0, 0, 300, 300);
-			fade -= 10;
-		} else if (label === "Question") {
-			tint(255, fade);
-			image(question, 0, 0, 300, 300);
-			fade -= 10;
-		} else if (label === "Sad") {
-			tint(255, fade);
-			image(sad, 0, 0, 300, 300);
-			fade -= 10;
-		} else if (label === "Bored") {
-			tint(255, fade);
-			image(bored, 0, 0, 300, 300);
-			fade -= 10;
-		}
+	if (label === "Laughing") {
+		image(laughing, 0, 0, 300, 300);
+	} else if (label === "Question") {
+		image(question, 0, 0, 300, 300);
+	} else if (label === "Sad") {
+		image(sad, 0, 0, 300, 300);
+	} else if (label === "Bored") {
+		image(bored, 0, 0, 300, 300);
 	}
 }
 
